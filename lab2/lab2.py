@@ -23,7 +23,7 @@ from model import LSTM_shakespeare_1L
 from fedml_api.standalone.fedavg.fedavg_api import FedAvgAPI
 
 
-# This answer
+# This is answer
 # from ans.shaTrainer import ShaTrainer
 
 # yout answer
@@ -123,6 +123,6 @@ if __name__ == "__main__":
                                                     step_size = args.comm_round/5,
                                                     gamma = 0.5)
     model_trainer = ShaTrainer(model)
-    fedavgAPI = FedAvgAPI(dataset, device, args, model_trainer, threading=3, scheduler=dummy_scheduler)
-    # fedavgAPI = FedAvgAPI(dataset, device, args, model_trainer, scheduler=dummy_scheduler)
+    # fedavgAPI = FedAvgAPI(dataset, device, args, model_trainer, threading=3, scheduler=dummy_scheduler)
+    fedavgAPI = FedAvgAPI(dataset, device, args, model_trainer, scheduler=dummy_scheduler)
     fedavgAPI.train()
