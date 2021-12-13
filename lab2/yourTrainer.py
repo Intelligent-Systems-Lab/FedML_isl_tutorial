@@ -1,4 +1,3 @@
-# Please use this script 
 # https://github.com/Intelligent-Systems-Lab/FedML/blob/master/fedml_api/standalone/fedavg/my_model_trainer_classification.py
 
 import logging
