@@ -3,7 +3,7 @@ import torch
 from torch import nn
 
 import sys
-sys.path.insert(0, "/home/tedbest/datadisk/FedML")
+# sys.path.insert(0, "/home/tedbest/datadisk/FedML")
 from fedml_core.trainer.model_trainer import ModelTrainer
 
 
