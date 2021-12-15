@@ -20,9 +20,10 @@ from dataloader import cifar_dataloaders
 
 # sys.path.insert(0, "/home/tedbest/datadisk/FedML")
 
-from fedml_api.model.cv.resnet import resnet56
+# from fedml_api.model.cv.resnet import resnet56
 from fedml_api.standalone.fedavg.fedavg_api import FedAvgAPI
 from fedml_api.standalone.fedavg.my_model_trainer_classification import MyModelTrainer
+from model import Net, resnet56, resnet20
 
 def add_args(parser):
     """
@@ -103,7 +104,8 @@ if __name__ == "__main__":
 
     dataset = cifar_dataloaders(root="./cifar10", index_path="./index.json", batch_size=args.batch_size, show=True)
 
-    model = resnet56(class_num=dataset[7])
+    # model = resnet56(class_num=dataset[7])
+    model = resnet20()
 
     dummy_opt = torch.optim.SGD(copy.deepcopy(model).parameters(), lr=args.lr)
     dummy_scheduler = torch.optim.lr_scheduler.StepLR(optimizer=dummy_opt, 
