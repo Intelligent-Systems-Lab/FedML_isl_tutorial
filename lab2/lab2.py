@@ -5,7 +5,13 @@ import random
 import sys
 import time
 import json
-from typing_extensions import Required
+try:
+    from typing_extensions import Required
+except ImportError:
+    from typing import Generic, TypeVar
+    T = TypeVar("T")
+    class Required(Generic[T]):
+        pass
 import numpy as np
 import copy
 
