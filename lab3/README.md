@@ -22,6 +22,8 @@ python3 lab3.py \
 ```
 
 ### lab3 rpc
+Tips: In distributed tasks, a worker whose index=0 will be the server. Clients should be executed first and launch server at last.
+
 ```
 WORKER_IDX=0
 
