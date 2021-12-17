@@ -12,7 +12,7 @@ import setproctitle
 import torch
 import wandb
 
-from adataloader import femnist_dataloaders
+from dataloader import femnist_dataloaders
 
 from fedml_api.distributed.utils.gpu_mapping import mapping_processes_to_gpu_device_from_yaml_file
 from fedml_api.distributed.fedavg.FedAvgAPI import FedML_init, FedML_FedAvg_distributed
